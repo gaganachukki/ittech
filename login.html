@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Stackly</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #050505;
+            background-image: 
+                radial-gradient(circle at top right, rgba(112, 0, 255, 0.3), transparent),
+                radial-gradient(circle at bottom left, rgba(0, 240, 255, 0.3), transparent);
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .auth-card h2 {
+            margin-bottom: 30px;
+        }
+
+        .auth-card input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: white;
+            outline: none;
+        }
+
+        .auth-card input:focus {
+            border-color: var(--primary);
+        }
+
+        .auth-card select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)) padding-box,
+                        linear-gradient(45deg, var(--primary), var(--secondary)) border-box;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            color: white;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 15px;
+            transition: var(--transition);
+        }
+
+        .auth-card select:focus {
+            box-shadow: 0 0 20px var(--primary-glow);
+            transform: scale(1.01);
+        }
+
+        .auth-card select option {
+            background: #111;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="auth-card reveal">
+        <a href="index.html" class="logo">
+            <img src="./static/images/logod.webp" alt="Stackly Logo">
+        </a>
+        <h2>Welcome Back</h2>
+        <form id="loginForm">
+            <select id="userType" required>
+                <option value="">Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <button type="button" class="btn btn-primary" id="loginBtn" style="display: block; width: 100%; margin-bottom: 20px; border: none; cursor: pointer;">Login</button>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Don't have an account? <a href="signup.html" style="color: var(--primary); text-decoration: none;">Sign
+                    Up</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="static/js/script.js"></script>
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            const userType = document.getElementById('userType').value;
+            
+            if (!userType) {
+                alert('Please select a role');
+                return;
+            }
+            
+            if (userType === 'admin') {
+                window.location.href = 'admindashboard.html';
+            } else if (userType === 'user') {
+                window.location.href = 'userdashboard.html';
+            }
+        });
+    </script>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stackly User Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="userdashboard.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <img src="./static/images/logod.webp" alt="Stackly Logo" style="height: 50px; width: auto;">
+                </a>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </li>
+                <li class="menu-item" onclick="window.location.href='404.html'">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>My Projects</span>
+                </li>
+                <li class="menu-item" onclick="window.location.href='404.html'">
+                    <i class="fas fa-tasks"></i>
+                    <span>Tasks</span>
+                </li>
+                <li class="menu-item" onclick="window.location.href='404.html'">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Profile</span>
+                </li>
+                <li class="menu-item" onclick="window.location.href='login.html'">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+
+            <header class="header-section">
+                <div>
+                    <h1>Welcome, John! 👋</h1>
+                    <p class="subtitle">Here's your daily overview</p>
+                </div>
+                <div class="user-info">
+                    <span class="date-time" id="dateTime"></span>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <section class="cards">
+                <div class="card card-1" style="animation: slideInLeft 0.6s ease-out;">
+                    <div class="card-icon"><i class="fas fa-folder-open"></i></div>
+                    <div class="card-content">
+                        <p class="card-label">My Projects</p>
+                        <p class="card-value">12</p>
+                        <small class="card-change">+2 this month</small>
+                    </div>
+                </div>
+                <div class="card card-2" style="animation: slideUp 0.6s ease-out 0.1s backwards;">
+                    <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <div class="card-content">
+                        <p class="card-label">Pending Tasks</p>
+                        <p class="card-value">5</p>
+                        <small class="card-change">Due soon</small>
+                    </div>
+                </div>
+                <div class="card card-3" style="animation: slideInRight 0.6s ease-out 0.2s backwards;">
+                    <div class="card-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="card-content">
+                        <p class="card-label">Completed</p>
+                        <p class="card-value">32</p>
+                        <small class="card-change">+8 this week</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Activity Section -->
+            <section class="content-grid">
+                <!-- Recent Activity -->
+                <div class="activity">
+                    <div class="section-header">
+                        <h2><i class="fas fa-history"></i> Recent Activity</h2>
+                    </div>
+                    <ul class="activity-list">
+                        <li class="activity-item" style="animation: slideInLeft 0.5s ease-out;">
+                            <div class="activity-icon"><i class="fas fa-paint-brush"></i></div>
+                            <div class="activity-content">
+                                <p class="activity-title">Updated project UI</p>
+                                <small>2 hours ago</small>
+                            </div>
+                        </li>
+                        <li class="activity-item" style="animation: slideInLeft 0.5s ease-out 0.1s backwards;">
+                            <div class="activity-icon"><i class="fas fa-check"></i></div>
+                            <div class="activity-content">
+                                <p class="activity-title">Completed task "Login Page"</p>
+                                <small>5 hours ago</small>
+                            </div>
+                        </li>
+                        <li class="activity-item" style="animation: slideInLeft 0.5s ease-out 0.2s backwards;">
+                            <div class="activity-icon"><i class="fas fa-user-plus"></i></div>
+                            <div class="activity-content">
+                                <p class="activity-title">Joined new project</p>
+                                <small>1 day ago</small>
+                            </div>
+                        </li>
+                        <li class="activity-item" style="animation: slideInLeft 0.5s ease-out 0.3s backwards;">
+                            <div class="activity-icon"><i class="fas fa-comments"></i></div>
+                            <div class="activity-content">
+                                <p class="activity-title">Commented on "API Design"</p>
+                                <small>2 days ago</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quick-stats">
+                    <div class="section-header">
+                        <h2><i class="fas fa-chart-pie"></i> Performance</h2>
+                    </div>
+                    <div class="stat-item" style="animation: slideInRight 0.5s ease-out;">
+                        <div class="stat-name">Productivity Score</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="stat-value">85%</span>
+                    </div>
+                    <div class="stat-item" style="animation: slideInRight 0.5s ease-out 0.1s backwards;">
+                        <div class="stat-name">Task Completion</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 72%"></div>
+                        </div>
+                        <span class="stat-value">72%</span>
+                    </div>
+                    <div class="stat-item" style="animation: slideInRight 0.5s ease-out 0.2s backwards;">
+                        <div class="stat-name">Collaboration Rate</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="stat-value">90%</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+        // Update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            document.getElementById('dateTime').textContent = now.toLocaleDateString('en-US', options);
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+
+</body>
+
+</html>

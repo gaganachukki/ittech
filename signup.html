@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Stackly</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #050505;
+            background-image: 
+                radial-gradient(circle at top right, rgba(112, 0, 255, 0.3), transparent),
+                radial-gradient(circle at bottom left, rgba(0, 240, 255, 0.3), transparent);
+        }
+        .auth-card {
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            text-align: center;
+        }
+        .auth-card h2 { margin-bottom: 30px; }
+        .auth-card input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: white;
+            outline: none;
+        }
+        .auth-card input:focus { border-color: var(--primary); }
+
+        @media (max-width: 480px) {
+            .name-row {
+                flex-direction: column;
+                gap: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-card reveal">
+        <a href="index.html" class="logo">
+            <img src="./static/images/logod.webp" alt="Stackly Logo">
+        </a>
+        <h2>Join Stackly</h2>
+        <form>
+            <div class="name-row" style="display: flex; gap: 15px;">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Create Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <a href="404.html" class="btn btn-primary" style="display: block; width: 100%; margin-top: 10px; margin-bottom: 20px; text-decoration: none;">Create Account</a>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Already have an account? <a href="login.html" style="color: var(--primary); text-decoration: none;">Login</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>

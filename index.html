@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Home - Futuristic IT Solutions</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="./static/images/logod.webp" alt="Stackly Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-btns">
+            <a href="login.html" class="btn btn-outline">Login</a>
+        </div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="anti-gravity-hero">Next-Gen IT Solutions</h1>
+        <p class="anti-gravity-hero" style="animation-delay: 0.2s;">We empower businesses with cutting-edge software development, AI automation, and transformative IT strategies.</p>
+        <div class="hero-btns anti-gravity-hero" style="animation-delay: 0.4s;">
+            <a href="services.html" class="btn btn-primary">Explore Services</a>
+            <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+        </div>
+    </header>
+
+    <section id="services">
+        <h2 class="section-title reveal">Our Core Services</h2>
+        <div class="grid">
+            <div class="card reveal anti-gravity-float">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Building high-performance, responsive web applications tailored to your business needs.</p>
+            </div>
+            <div class="card reveal anti-gravity-float">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>App Development</h3>
+                <p>Innovative mobile solutions for iOS and Android that engage users and drive growth.</p>
+            </div>
+            <div class="card reveal anti-gravity-float">
+                <i class="fas fa-brain"></i>
+                <h3>AI & Automation</h3>
+                <p>Leveraging artificial intelligence to streamline operations and enhance decision-making.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" style="background: rgba(255,255,255,0.02);">
+        <div class="grid" style="text-align: center;">
+            <div class="reveal" style="animation: scaleIn 0.8s ease-out;">
+                <h2 style="color: var(--primary);"><span class="counter" data-target="150">0</span>+</h2>
+                <p>Experts</p>
+            </div>
+            <div class="reveal" style="animation: scaleIn 0.8s ease-out 0.1s backwards;">
+                <h2 style="color: var(--primary);"><span class="counter" data-target="2015">0</span></h2>
+                <p>Founded</p>
+            </div>
+            <div class="reveal" style="animation: scaleIn 0.8s ease-out 0.2s backwards;">
+                <h2 style="color: var(--primary);"><span class="counter" data-target="500">0</span>+</h2>
+                <p>Projects Done</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" style="background: rgba(255,255,255,0.01);">
+        <h2 class="section-title reveal">Featured Projects</h2>
+        <div class="grid">
+            <div class="card reveal anti-gravity-float" style="padding: 0; overflow: hidden;">
+                <div
+                    style="height: 200px; background-image: url('./static/images/fintech.webp'); background-size: cover; background-position: center;">
+                </div>
+                <div style="padding: 25px;">
+                    <h3>Fintech Dashboard</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Modern financial management platform with
+                        real-time analytics.</p>
+                </div>
+            </div>
+            <div class="card reveal anti-gravity-float" style="padding: 0; overflow: hidden;">
+                <div
+                    style="height: 200px; background-image: url('./static/images/ecommerce.webp'); background-size: cover; background-position: center;">
+                </div>
+                <div style="padding: 25px;">
+                    <h3>E-Commerce App</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">High-conversion mobile shopping experience
+                        for global brands.</p>
+                </div>
+            </div>
+            <div class="card reveal anti-gravity-float" style="padding: 0; overflow: hidden;">
+                <div
+                    style="height: 200px; background-image: url('./static/images/aihealthcare.webp'); background-size: cover; background-position: center;">
+                </div>
+                <div style="padding: 25px;">
+                    <h3>AI Healthcare SaaS</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Empowering doctors with AI-driven diagnostic
+                        tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2 class="section-title reveal">What Our Clients Say</h2>
+        <div class="grid">
+            <div class="card reveal anti-gravity-card">
+                <p style="font-style: italic; margin-bottom: 20px;">"Stackly transformed our digital presence. Their
+                    team is professional, innovative, and incredibly fast."</p>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div
+                        style="width: 50px; height: 50px; border-radius: 50%; background-image: url('./static/images/uifaces-popular-avatar\ \(3\).webp'); background-size: cover; background-position: center; border: 2px solid var(--primary);">
+                    </div>
+                    <div>
+                        <h4 style="margin: 0;">Fazana</h4>
+                        <small style="color: var(--text-muted);">CEO, TechFlow</small>
+                    </div>
+                </div>
+            </div>
+            <div class="card reveal anti-gravity-card">
+                <p style="font-style: italic; margin-bottom: 20px;">"The AI solutions provided by Stackly have saved us
+                    hundreds of hours in automation. Highly recommended!"</p>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div
+                        style="width: 50px; height: 50px; border-radius: 50%; background-image: url('./static/images/uifaces-popular-avatar\ \(7\).webp'); background-size: cover; background-position: center; border: 2px solid var(--secondary);">
+                    </div>
+                    <div>
+                        <h4 style="margin: 0;">Monica</h4>
+                        <small style="color: var(--text-muted);">CTO, Innovate Solutions</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="index.html" class="logo">
+                    <img src="./static/images/logod.webp" alt="Stackly Logo"></a>
+                <p style="color: var(--text-muted);">Empowering the future through technology since 2015. Your partner
+                    in digital transformation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@thestackly.com</li>
+                    <li><i class="fas fa-phone"></i> +91 70107 92745</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Salem, Tamil Nadu, India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Stackly IT Solutions. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>

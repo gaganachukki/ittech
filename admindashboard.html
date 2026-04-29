@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stackly Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admindashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <img src="./static/images/logod.webp" alt="Stackly Logo">
+            </a>
+        </div>
+        <div class="admin-badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>Admin Panel</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="menu-item active">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </li>
+            <li class="menu-item" onclick="window.location.href='404.html'">
+                <i class="fas fa-users"></i>
+                <span>Users</span>
+            </li>
+            <li class="menu-item" onclick="window.location.href='404.html'">
+                <i class="fas fa-project-diagram"></i>
+                <span>Projects</span>
+            </li>
+            <li class="menu-item" onclick="window.location.href='404.html'">
+                <i class="fas fa-file-alt"></i>
+                <span>Reports</span>
+            </li>
+            <li class="menu-item" onclick="window.location.href='404.html'">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </li>
+        </ul>
+        <a href="login.html" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <header class="header-section">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p class="subtitle">System overview & analytics</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-action"><i class="fas fa-bell"></i></button>
+                <button class="btn-action"><i class="fas fa-user-circle"></i></button>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <section class="cards">
+            <div class="card card-1">
+                <div class="card-header">
+                    <h3>Total Users</h3>
+                    <span class="card-icon"><i class="fas fa-users"></i></span>
+                </div>
+                <p class="card-value">1,245</p>
+                <small class="card-change"><i class="fas fa-arrow-up"></i> 12% from last month</small>
+            </div>
+            <div class="card card-2">
+                <div class="card-header">
+                    <h3>Active Projects</h3>
+                    <span class="card-icon"><i class="fas fa-project-diagram"></i></span>
+                </div>
+                <p class="card-value">86</p>
+                <small class="card-change"><i class="fas fa-arrow-up"></i> 5 this week</small>
+            </div>
+            <div class="card card-3">
+                <div class="card-header">
+                    <h3>Revenue</h3>
+                    <span class="card-icon"><i class="fas fa-rupee-sign"></i></span>
+                </div>
+                <p class="card-value">₹2.4L</p>
+                <small class="card-change"><i class="fas fa-arrow-up"></i> 8% increase</small>
+            </div>
+            <div class="card card-4">
+                <div class="card-header">
+                    <h3>Support Tickets</h3>
+                    <span class="card-icon"><i class="fas fa-ticket-alt"></i></span>
+                </div>
+                <p class="card-value">23</p>
+                <small class="card-change"><i class="fas fa-arrow-down"></i> 15% resolved</small>
+            </div>
+        </section>
+
+        <!-- Charts & Analytics -->
+        <section class="charts-section">
+            <!-- Bar Chart -->
+            <div class="chart-container">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-bar"></i> Monthly Growth</h2>
+                    <span class="time-range">Last 6 Months</span>
+                </div>
+                <div class="chart">
+                    <div class="chart-item">
+                        <span class="bar-value">₹45K</span>
+                        <div class="bar" data-height="60%"></div>
+                        <span class="month-label">Jan</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="bar-value">₹60K</span>
+                        <div class="bar" data-height="80%"></div>
+                        <span class="month-label">Feb</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="bar-value">₹30K</span>
+                        <div class="bar" data-height="40%"></div>
+                        <span class="month-label">Mar</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="bar-value">₹67.5K</span>
+                        <div class="bar" data-height="90%"></div>
+                        <span class="month-label">Apr</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="bar-value">₹52.5K</span>
+                        <div class="bar" data-height="70%"></div>
+                        <span class="month-label">May</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="bar-value">₹63.75K</span>
+                        <div class="bar" data-height="85%"></div>
+                        <span class="month-label">Jun</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="activity-container">
+                <div class="section-header">
+                    <h2><i class="fas fa-history"></i> Recent Activity</h2>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon user"><i class="fas fa-user-plus"></i></div>
+                        <div class="activity-info">
+                            <p class="activity-title">New user registered</p>
+                            <small>5 minutes ago</small>
+                        </div>
+                        <span class="activity-badge">User</span>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon project"><i class="fas fa-check-circle"></i></div>
+                        <div class="activity-info">
+                            <p class="activity-title">Project "UI Redesign" completed</p>
+                            <small>2 hours ago</small>
+                        </div>
+                        <span class="activity-badge">Project</span>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon alert"><i class="fas fa-exclamation-circle"></i></div>
+                        <div class="activity-info">
+                            <p class="activity-title">Server performance warning</p>
+                            <small>4 hours ago</small>
+                        </div>
+                        <span class="activity-badge">Alert</span>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon payment"><i class="fas fa-credit-card"></i></div>
+                        <div class="activity-info">
+                            <p class="activity-title">Payment received from Enterprise client</p>
+                            <small>1 day ago</small>
+                        </div>
+                        <span class="activity-badge">Payment</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Status -->
+        <section class="status-section">
+            <div class="section-header">
+                <h2><i class="fas fa-heartbeat"></i> System Status</h2>
+            </div>
+            <div class="status-grid">
+                <div class="status-item">
+                    <div class="status-dot online"></div>
+                    <div class="status-content">
+                        <p class="status-name">API Server</p>
+                        <small>Operational</small>
+                    </div>
+                    <span class="status-time">99.9% uptime</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-dot online"></div>
+                    <div class="status-content">
+                        <p class="status-name">Database</p>
+                        <small>Operational</small>
+                    </div>
+                    <span class="status-time">99.8% uptime</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-dot online"></div>
+                    <div class="status-content">
+                        <p class="status-name">CDN</p>
+                        <small>Operational</small>
+                    </div>
+                    <span class="status-time">100% uptime</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-dot warning"></div>
+                    <div class="status-content">
+                        <p class="status-name">Email Service</p>
+                        <small>Minor issues</small>
+                    </div>
+                    <span class="status-time">Investigating</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<style>
+    .bar-value {
+        font-size: 13px;
+        color: #00d4ff;
+        font-weight: 700;
+        margin-bottom: 8px;
+        display: block;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const bars = document.querySelectorAll('.bar');
+        
+        // Simple intersection observer to trigger animation when visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bar = entry.target;
+                    const height = bar.getAttribute('data-height');
+                    setTimeout(() => {
+                        bar.style.height = height;
+                    }, 200);
+                    observer.unobserve(bar);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        bars.forEach(bar => {
+            bar.style.height = '0';
+            bar.style.transition = 'height 1.2s cubic-bezier(0.34, 1.56, 0.64, 1)';
+            observer.observe(bar);
+        });
+    });
+</script>
+
+</body>
+</html>
